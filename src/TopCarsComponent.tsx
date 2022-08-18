@@ -12,18 +12,34 @@ type TopCarsType = {
 
 
 export const TopCarsComponent = (props: TopCarsComponentType) => {
+    // return (
+    //     <ul>
+    //         {props.topCars.map((objectFromTopCarsArray, index) => {
+    //             return (
+    //             <li key={objectFromTopCarsArray.manufacturer}>
+    //                 <div>
+    //                     <span>{objectFromTopCarsArray.manufacturer}</span>
+    //                 </div>
+    //                 <span>model: {objectFromTopCarsArray.model}</span>
+    //             </li>
+    //             )
+    //         })}
+    //     </ul>
+    // );
     return (
-        <ul>
+        <table>
             {props.topCars.map((objectFromTopCarsArray, index) => {
-                return (
-                <li key={objectFromTopCarsArray.manufacturer}>
-                    <div>
-                        <span>{objectFromTopCarsArray.manufacturer}</span>
-                    </div>
-                    <span>model: {objectFromTopCarsArray.model}</span>
-                </li>
-                )
+            return (
+                <tr key={objectFromTopCarsArray.manufacturer}>
+                    <td>
+                        {objectFromTopCarsArray.manufacturer}
+                    </td>
+                    <th>
+                        {objectFromTopCarsArray.model}
+                    </th>
+                </tr>
+            )
             })}
-        </ul>
+        </table>
     );
 };
