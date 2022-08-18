@@ -24,8 +24,8 @@ export const NewComponent = (props: NewComponentType) => {
                 )
             })}
         </ul>
-            );
-            };
+    );
+};
 
 
 
