@@ -28,15 +28,15 @@ export const TopCarsComponent = (props: TopCarsComponentType) => {
     // );
     return (
         <table>
-            {props.topCars.map((objectFromTopCarsArray, index) => {
+            {props.topCars.map((objectFromTopCarsArray, index)  => {
             return (
                 <tr key={objectFromTopCarsArray.manufacturer}>
-                    <td>
-                        {objectFromTopCarsArray.manufacturer}
-                    </td>
                     <th>
-                        {objectFromTopCarsArray.model}
+                        {objectFromTopCarsArray.manufacturer}:
                     </th>
+                    <td>
+                        {objectFromTopCarsArray.model}
+                    </td>
                 </tr>
             )
             })}
